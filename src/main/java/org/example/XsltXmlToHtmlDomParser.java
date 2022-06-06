@@ -19,6 +19,8 @@ public class XsltXmlToHtmlDomParser {
             = "src/main/resources/Hotels.xml";
     private static final String XSLT_FILENAME
             = "src/main/resources/xslt/hotels-xml-html.xsl";
+    private static final String HTML_FILENAME
+            = "src/main/resources/hotels.html";
 
     public static void main(String[] args) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -28,7 +30,7 @@ public class XsltXmlToHtmlDomParser {
 
             Document document = documentBuilder.parse(is);
 
-            try(FileOutputStream output = new FileOutputStream("src/main/resources/hotels.html")) {
+            try(FileOutputStream output = new FileOutputStream(HTML_FILENAME)) {
                 transform(document, output);
             }
         } catch (IOException | ParserConfigurationException | SAXException |

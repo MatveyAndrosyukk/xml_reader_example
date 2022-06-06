@@ -4,20 +4,20 @@
         <h1 style="font-size:20pt">Hotels.xml</h1>
 
         <!--Hotels-->
-        <div id="Hotels">
+        <div name="Hotels">
             <span>&lt;Hotels&gt;</span>
 
             <xsl:for-each select="Hotels/Hotel">
                 <xsl:if test="contains(Name, 'Hilton') and (contains(Address/State, 'New York') or contains(Address/State, 'NY'))">
                     <!--Hotel-->
-                    <div style="margin-left:25pt" id="Hotel">
+                    <div style="margin-left:25pt" name="Hotel">
                         <div>
                             <span>&lt;Hotel Price = "<xsl:value-of select="@Price"/>"&gt;
                             </span>
                         </div>
 
                         <!--Hotel -> Name-->
-                        <div style="margin-left:25pt" id="Name">
+                        <div style="margin-left:25pt" name="Name">
                             <span>&lt;Name&gt;</span>
                             <xsl:value-of select="Name"/>
                             <span>&lt;/Name&gt;</span>
@@ -25,35 +25,35 @@
                         <!-- - - - - - - -->
 
                         <!--Hotel -> Address-->
-                        <div id="Address">
+                        <div name="Addresses">
                             <div style="margin-left:25pt">
                                 <span>&lt;Address&gt;</span>
                             </div>
 
-                            <div style="margin-left:25pt" id="Address">
+                            <div style="margin-left:25pt" name="Address">
                                 <!--Hotel -> Address -> AddressLine-->
-                                <div style="margin-left:25pt" id="AddressLine">
+                                <div style="margin-left:25pt" name="AddressLine">
                                     <span>&lt;AddressLine&gt;</span>
                                     <xsl:value-of select="Address/AddressLine"/>
                                     <span>&lt;/AddressLine&gt;</span>
                                 </div>
                                 <!-- - - - - - - - - - - - - - - - -->
                                 <!--Hotel -> Address -> City-->
-                                <div style="margin-left:25pt" id="City">
+                                <div style="margin-left:25pt" name="City">
                                     <span>&lt;City&gt;</span>
                                     <xsl:value-of select="Address/City"/>
                                     <span>&lt;/City&gt;</span>
                                 </div>
                                 <!-- - - - - - - - - - - - - - - - -->
                                 <!--Hotel -> Address -> Country-->
-                                <div style="margin-left:25pt" id="Country">
+                                <div style="margin-left:25pt" name="Country">
                                     <span>&lt;Country&gt;</span>
                                     <xsl:value-of select="Address/Country"/>
                                     <span>&lt;/Country&gt;</span>
                                 </div>
                                 <!-- - - - - - - - - - - - - - - - -->
                                 <!--Hotel -> Address -> State-->
-                                <div style="margin-left:25pt" id="State">
+                                <div style="margin-left:25pt" name="State">
                                     <span>&lt;State&gt;</span>
                                     <xsl:value-of select="Address/State"/>
                                     <span>&lt;/State&gt;</span>

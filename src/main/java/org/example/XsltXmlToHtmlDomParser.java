@@ -18,7 +18,7 @@ public class XsltXmlToHtmlDomParser {
     private static final String XML_FILENAME
             = "src/main/resources/Hotels.xml";
     private static final String XSLT_FILENAME
-            = "src/main/resources/xslt/hotels-xml-html.xslt";
+            = "src/main/resources/xslt/hotels-xml-html.xsl";
 
     public static void main(String[] args) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

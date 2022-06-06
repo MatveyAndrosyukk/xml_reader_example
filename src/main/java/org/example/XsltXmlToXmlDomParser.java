@@ -14,13 +14,13 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 
-public class XsltXmlToHtmlDomParser {
+public class XsltXmlToXmlDomParser {
     private static final String XML_FILENAME
             = "src/main/resources/Hotels.xml";
     private static final String XSLT_FILENAME
-            = "src/main/resources/xslt/hotels-xml-html.xsl";
+            = "src/main/resources/xslt/Hotels.xsl";
     private static final String HTML_FILENAME
-            = "src/main/resources/result/hotels.html";
+            = "src/main/resources/result/Hilton.xml";
 
     public static void main(String[] args) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
